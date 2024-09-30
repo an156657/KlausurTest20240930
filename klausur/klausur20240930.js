@@ -9,20 +9,34 @@ console.log("Aufgabe 1")
 // Es soll das Volumen eines Würfels in Quadratzentimeter (cm3) ausgegeben werden. Arbeiten Sie mit einem Objekt und sprechenden Eigenschaften.
 // Geben Sie das Volumen in einem Antwortsatz auf der Konsole aus.
 
+class Würfel{constructo(){  this.Länge
+                            this.Breite
+                            this.Höhe   }}
 
+let würfel1=new Würfel()
 
+würfel1.Länge=100
+würfel1.Breite=100
+würfel1.Höhe=100
+
+let volumen=würfel1.Länge*würfel1.Breite*würfel1.Höhe
+
+console.log('Bei einer Länge von ' +würfel1.Länge+ ' cm, einer Höhe von ' +würfel1.Höhe+ ' cm und einer Höhe von ' +würfel1.Höhe+ ' cm beträgt das Volumen des Würfels '+volumen+ ' cm3')
 
 // 1b 
 // Wenn das Volumen 1000 oder mehr Quadratzentimeter beträgt soll eine Meldung auf der Konsole ausgegeben werden, die besagt,
 // dass das Volumen 1000 oder mehr Quadratzentimeter beträgt.
 
-
+if(volumen>=1000){console.log('Das Volumen des Würfels beträgt 1000 oder mehr Quadratzentimeter.')}
 
 
 
 // 1c) - Nur Klausurschreiber
 // Nutzen Sie die Math-Bibliothek .sqrt(), um die Wurzel aus dem Volumen zu errechnen. Geben Sie die Kantenlänge in einem Antwortsatz aus.
 
+let wurzelAusVolumen=Math.sqrt(volumen)
+
+console.log('Die Wurzel aus dem Volumen beträgt: '+wurzelAusVolumen+ ' cm. Dies ist ungefähr die Kantenlänge des Würfels')
 
 
 console.log("Aufgabe 2")
@@ -32,23 +46,41 @@ console.log("Aufgabe 2")
 
 // 2a)
 // Definieren Sie die class
-
+class Zeugnis{constructor(){    this.Mathe
+                                this.Englisch
+                                this.Deutsch
+                                this.Sport
+                                this.Biologie
+                                this.Religion
+                                this.Niederländish
+                                this.Physik             }}
 
 
 // 2b)
 // Deklarieren, Instanziieren und Initialisieren Sie ein Objekt von der Zeignisklasse.
+let zeugnisHans=new Zeugnis()
 
-
+zeugnisHans.Mathe=2
+zeugnisHans.Englisch=2
+zeugnisHans.Deutsch=2
+zeugnisHans.Sport=2
+zeugnisHans.Biologie=2
+zeugnisHans.Religion=2
+zeugnisHans.Niederländisch=2
+zeugnisHans.Physik=2
 
 
 // 2c)
 // Geben Sie die Eigenschaftswerte Ihres Objekts auf der Konsole aus.
-
-
+console.log('Hans hat folgende Noten: Mathe '+zeugnisHans.Mathe+' Englisch '+zeugnisHans.Englisch+ ' Deutsch '+zeugnisHans.Deutsch+' Sport '+zeugnisHans.Sport+' Biologie '+zeugnisHans.Biologie)
+console.log('Religion '+zeugnisHans.Religion+ ' Niederländisch '+zeugnisHans.Niederländisch+ ' Physik '+zeugnisHans.Physik)
 
 // 2d) NUR KLAUSURSCHREIBER
 // Berechnen Sie die Durchnittsnote Ihres Objekts. Geben Sie die Durchschnittsnote auf der Konsole aus.
 
+let durchschnittsnote= (zeugnisHans.Mathe + zeugnisHans.Englisch + zeugnisHans.Deutsch + zeugnisHans.Sport+ zeugnisHans.Biologie + zeugnisHans.Religion + zeugnisHans.Niederländisch + zeugnisHans.Physik)/8
+
+console.log(' Hans hat die Durchschnittsnote: '+durchschnittsnote)
 
 
 
@@ -64,9 +96,17 @@ console.log("Aufgabe 2")
 // let x = Math.min(5, 10); --> Es werden 5 und 10 verglichen. x nimmt jetzt den Wert 5 an, da 5 der niedrigste der kommaseparierten Werte ist.
 
 
+let durchschnittsnoteLisa=3
+let durchschnittsnoteTom=4
+let durchschnittsnoteMax=5
 
+let x =Math.min(durchschnittsnote, durchschnittsnoteLisa, durchschnittsnoteTom, durchschnittsnoteMax)
 
+if(x=durchschnittsnote){console.log('Hans hatmit die beste Durchschnittsnote und zwar: '+x)}
+else{console.log('Hanshat nicht die beste Durchschnittsnote')}
 
+// console.log('Die beste Durchschnittsnote ist: '+x)
+//!!!!!!!!!!!!!!!!!!!!!
 
 console.log("Aufgabe 3")
 // Es gilt:
@@ -85,20 +125,39 @@ console.log("Aufgabe 3")
 
 // 3a)
 // Deklarieren, Instanziieren Sie ein Objekt mit allen genannten Eigenschaften. 
+class Zeitung{constructor(){this.Rabatt
+                            this.NettoRechnungsbetrag
+                            this.MwStProzentsatz
+                            this.BruttoRechnungsbetrag
+                            this.Skonto
+                            this.Zahlungsbetrag
+                            this.MwSt           }}
 
 
+let zeitung = new Zeitung()
 
 
 // 3b
 // Initialisieren Sie Ihr Objekt mit den gegebenen Werten. 
 // Geben Sie die einen Anwortsatz auf der Konsole aus.
 
+let produktart="Zeitung"
 
+zeitung.NettoRechnungsbetrag=370
+
+if(produktart==="Zeitung" || produktart ==="Lebensmittel" || produktart==="Buch"){zeitung.MwStProzentsatz=7}
+else{zeitung.MwStProzentsatz=19}
+
+
+
+console.log('Der Nettorechnungsbetrag beträgt: '+zeitung.NettoRechnungsbetrag+ ' Euro und der MwStProzentsatz beträgt: '+zeitung.MwStProzentsatz+ ' Prozent')
 
 // 3c)
 // Berechnen Sie die MwSt in einer sprechenden Variablen. Geben Sie einen Anwortsatz auf der Konsole aus.
 
+zeitung.MwSt=zeitung.NettoRechnungsbetrag*zeitung.MwStProzentsatz/100
 
+console.log('Die Mehrwertsteuer der Zeitung beträgt: '+zeitung.MwSt+ ' Euro.')
 
 
 
@@ -107,11 +166,11 @@ console.log("Aufgabe 3")
 // Wenn die Produktart sich ändert, muss Ihre Berechnung sich anpassen.
 // Geben Sie den Wert in einen Anwortsatz auf der Konsole aus.
 
+zeitung.BruttoRechnungsbetrag = zeitung.NettoRechnungsbetrag+zeitung.MwSt
 
+console.log('Der Brutto-Rechnungsbetrag beträgt: '+zeitung.BruttoRechnungsbetrag+ ' Euro')
 
-
-
-// 3e) NUR KLAUSURSCHREIBER
+// 3e) NUR KLAUSURSCHREIBER   /////////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11
 // Das Skonto ist gestaffelt abhängig vom Brutto-Rechnungsbetrags.
 // Brutto-Rechnungsbetrag kleiner als   |     Skonto
 //                                  100 | 1
@@ -126,6 +185,22 @@ console.log("Aufgabe 3")
 
 // Berechnen Sie das Skonto und geben Sie das Ergebnis auf der Konsole aus.
 
+let skonto;
+
+if(zeitung.BruttoRechnungsbetrag<900){skonto=2}
+if(zeitung.BruttoRechnungsbetrag<800){skonto=1.9}
+if(zeitung.BruttoRechnungsbetrag<700){skonto=1.8}
+if(zeitung.BruttoRechnungsbetrag<600){skonto=1.7}
+if(zeitung.BruttoRechnungsbetrag<500){skonto=1.6}
+if(zeitung.BruttoRechnungsbetrag<400){skonto=1.5}
+if(zeitung.BruttoRechnungsbetrag<300){skonto=1.4}
+if(zeitung.BruttoRechnungsbetrag<200){skonto=1.1}
+if(zeitung.BruttoRechnungsbetrag<100){skonto=1}
+
+
+console.log('Der Skontobetrag beträgt: '+skonto+ ' Euro')
+
+
 console.log("Aufgabe 4") // NUR KLAUSURSCHREIBER
 
 // Sie wollen Ihre Auto-Kaufentscheidung mit einem Programm stützen.
@@ -134,12 +209,37 @@ console.log("Aufgabe 4") // NUR KLAUSURSCHREIBER
 // Erstellen Sie zwei Auto-Objekte mit den Eigenschaften Name, Leistung, Geschwindigkeit, Preis, Verbrauch
 // Initialisieren Sie mit realsitischen Werten.
 
+class Auto{constructor(){this.Name
+                        this.Leistung
+                        this.Geschwindigkeit
+                        this.Preis
+                        this.Verbrauch}}
 
+let borAb123 = new Auto()
+let borBa456= new Auto()
 
+borAb123.Name="Audi"
+borAb123.Leistung= 1200
+borAb123.Geschwindigkeit=200
+borAb123.Preis=10000
+borAb123.Verbrauch=100
 
-// 4b) // NUR KLAUSURSCHREIBER
+borBa456.Name="BMW"
+borBa456.Leistung=1100
+borBa456.Geschwindigkeit=190
+borBa456.Preis=20000
+borBa456.Verbrauch=200
+
+// 4b) // NUR KLAUSURSCHREIBER  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // Vergleichen Sie die beiden Autos:
 // Wenn eines der Autos in Preis und Verbrauch besser ist, dann soll es das Auto werden.
 // Wenn Preis und Verbrauch gleich sind, dann entscheidet die Geschwindigkeit.
 // Wenn auch die Geschwindigkeit gleich ist, entscheidet die Leistung.
 // Geben Sie entsprechende Antworten auf der Kosnole aus.
+
+if(borAb123.Preis<borBa456.Preis && borAb123.Verbrauch < borBa456.Verbrauch){console.log('Es soll Auto borAb123 werden')}
+ else{if(borAb123.Preis=borBa456.Preis && borAb123.Verbrauch=borBa456.Verbrauch){if(borAb123.Gerschwindigkeit>borBa456.Geschwindigkeit){console.log('Es wird Auto borAb123')}}
+ else{if(borAb123.Geschwindigkeit=borBa456.Geschwindigkeit){if(borAb123.Leistung>borBa456.Leistung){console.log('Es wird Auto borAb123')}}}
+ else{console.log('Es wird Auto borBa456')}}
+
+
